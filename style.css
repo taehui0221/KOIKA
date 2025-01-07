@@ -1,5 +1,10 @@
 @charset "utf-8";
-
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 *{
     margin: 0;
@@ -31,7 +36,7 @@ header{width:100%;}
     .head-body > .inner{padding:12px 0 16px;}
         .etc{padding:6px 0; display:flex; align-items:flex-start; justify-content:flex-end; flex-direction:row;}
         .etc li{display:inline-block;}
-        .etc li::after{content:"l"; margin:0 15px; color:#d8d8d8;}
+        .etc li::after{content:"l"; margin:0 5px; color:#d8d8d8;}
         .etc li:last-child::after{display:none;}
         .etc a{color:#1d1d1d;}
         .etc a:hover{color:#003675;}
@@ -56,6 +61,26 @@ header{width:100%;}
     .head-inner{width:1280px; margin:0 auto;}
         .head-gnb-tab{/*display:flex; align-items:center; justify-content:space-between; padding:20px 0;*/}
 
+        .gnb > ul{display:flex; align-items:center; justify-content:space-between; position:relative; flex-grow:0; width:calc(100% + 40px); margin-left:-20px;}
+        .gnb .depth_1{padding:20px;}
+        .gnb .depth_1 > a{font-size:19px; font-weight:bold; color:#1d1d1d;}
+        .gnb .depth_1 li:hover{color:#003675;}
+        .gnb .depth_1:hover{background-color:#edf1f5;}
+        .gnb .depth_1 .sub{position:absolute; padding-top:20px; background-color:#edf1f5; width:calc(200% + -40px); top:63.5px; left:-50%; display:none; white-space:nowrap; z-index:100;}
+        .gnb .depth_1 .sub ul{display:flex; flex-wrap:wrap; align-content:flex-start; width:1280px; margin:0 auto;}
+        .gnb .depth_1 .sub li{width:250px; line-height:1.5em;}
+        .gnb .depth_1 .sub li a{}
+        .gnb .depth_1:hover .sub,
+        .gnb .depth_1 a:focus + .sub{display:block;}
+
+        .gnb .depth_2 a{border-bottom:1px solid #1d1d1d; padding:5px; font-size:19px; color:#1d1d1d; font-weight:bold; margin-left:15px;}
+        .gnb .depth_2 a:hover{color:#003675;}
+        .gnb .depth_2 .sub-text{color:#1d1d1d; padding:10px 20px 30px;}
+        .gnb .depth_2 .sub-text dt{color:#1d1d1d;}
+        .gnb .depth_2 .sub-text dt:hover{color:#003675;}
+
+
+
     /*    .head-gnb-tab > input[type="radio"]{display:none;}
         .head-gnb-tab > input[type="radio"]+.gnb-label{font-size:19px; color:#1d1d1d; font-weight:bold;}
         .head-gnb-tab > input[type="radio"]:checked + .gnb-label{color:#003675;}
@@ -70,10 +95,10 @@ header{width:100%;}
         .head-gnb-tab input[id="gnb-tab05"]:checked~.gnb-con5{display:flex;}
         .head-gnb-tab input[id="gnb-tab06"]:checked~.gnb-con6{display:flex;}
         .head-gnb-tab input[id="gnb-tab07"]:checked~.gnb-con7{display:flex;}
-        */
+    
 
-        .gnb-tabmenu ul{display:flex; align-items:center; justify-content:space-between; padding:20px 0; position:relative;}
-        .gnb-tabmenu li{font-size:19px; font-weight:bold;}
+        .gnb-tabmenu ul{display:flex; align-items:center; justify-content:space-between; position:relative;}
+        .gnb-tabmenu li{font-size:19px; font-weight:bold; padding:20px 0;}
         .gnb-tabmenu a{color:#1d1d1d;}
         .gnb-tabmenu a:hover{color:#003675;}
         
@@ -88,6 +113,7 @@ header{width:100%;}
         .gnb-conbox-t dl{}
         .gnb-conbox-t dt{color:#1d1d1d;}
         .gnb-conbox-t dt:hover{color:#003675;}
+        */
 
     /*
         .gnb-conbox{color:#1d1d1d; display:none; position:absolute; top:63.5px; left:0; z-index:100; background-color:#fff; width:100vw; display:flex; justify-content:center;}
@@ -251,7 +277,7 @@ footer{width:100%; height:fit-content; background-color:#F8F8F8;}
     .footer-btn{border-top:1px solid #d8d8d8;}
         .f-btn{width:1280px; margin:0 auto; padding:20px 0; position:relative;}
             .f-btm-text ul{display:flex; align-items:flex-start;}
-            .f-btm-text a{font-size:17px; color:#1d1d1d; font-weight:bold; margin-right:10px;}
+            .f-btm-text a{font-size:15px; color:#1d1d1d; font-weight:bold; margin-right:10px;}
             .f-btm-text a span{color:#003675;}
             .f-btn p{font-size:15px; color:#555555; position:absolute; top:18px; right:0;}
 
